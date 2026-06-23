@@ -23,6 +23,3 @@ export const store = configureStore({
 
 // Persistor untuk digunakan di PersistGate
 export const persistor = persistStore(store);
-
-// Ekspor store sebagai default juga
-export default store;
