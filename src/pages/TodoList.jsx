@@ -51,7 +51,7 @@ function TaskRow(props) {
   const isDone = groupTitle === 'Done';
 
   return (
-    <div className="grid grid-cols-[1fr_150px_130px_110px] items-center gap-4 rounded-lg px-4 py-3 text-sm transition hover:bg-slate-50 max-md:grid-cols-1 max-md:gap-2 max-md:rounded-xl max-md:border max-md:border-slate-100 max-md:bg-white">
+    <div className="grid grid-cols-[1fr_0.5fr_0.5fr_0.5fr_0.25fr] items-center gap-4 rounded-lg px-4 py-3 text-sm transition hover:bg-slate-50 max-md:grid-cols-1 max-md:gap-2 max-md:rounded-xl max-md:border max-md:border-slate-100 max-md:bg-white">
       <div className="flex items-center gap-3">
         {!isDone && (
           <button
@@ -69,8 +69,10 @@ function TaskRow(props) {
         <span>{task.dueDate}</span>
       </div>
       <div><Badge type={task.tag} /></div>
-      <div className="flex items-center gap-2">
+      <div>
         <Badge type={task.priority} />
+      </div>
+      <div className="flex items-center gap-2">
         <button
           onClick={() => onDeleteTask(task.id)}
           className="text-red-500 hover:text-red-700"
@@ -107,11 +109,12 @@ function TaskSection(props) {
         </button>
       </div>
       <div className="px-4 py-3 max-md:hidden">
-        <div className="grid grid-cols-[1fr_150px_130px_110px] gap-4 text-sm font-medium text-slate-400">
+        <div className="grid grid-cols-[1fr_0.5fr_0.5fr_0.5fr_0.25fr] gap-4 text-sm font-medium text-slate-400">
           <p>Task</p>
           <p>Due Date</p>
           <p>Task Tags</p>
           <p>Priority</p>
+          <p>Action</p>
         </div>
       </div>
       <div className="space-y-1 px-4 pb-4 max-md:space-y-3">
