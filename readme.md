@@ -1,6 +1,6 @@
-# Implementasi penggunaan ref
+# Implementasi Redux
 
-## tampilan ini adalah todo list yang menggunakan ref dalam manipulasi data
+## tampilan ini adalah todo list yang menggunakan redux
 
 ## Screenshot:
 <table>
@@ -29,4 +29,7 @@
 </table>
 
 
-Pada tampilan ini merupakan tampilan todo list dengan menggunakan ref dan forwardref untuk manipulasi data, dimana kita input list akan masuk ke bagian todo terlebih dahulu, ketika di ceklist akan berpindah ke bagian proses, setlah di proses di ceklist akan pindah ke bagian done. 
+Pada tampilan ini merupakan tampilan todo list, dengan memanfaatkan penyimpanan store pada redux, dan di store penyimpanan juga dilakukan di local storage dengan menggunakan redux-persist. untuk fitur slice pada reducers todo ada addTask, editTask, removeTask, resetTask, dan moveTask.
+
+untuk alurnya kita input list akan masuk ke bagian todo terlebih dahulu, ketika di ceklist akan berpindah ke bagian proses, setelah di proses di ceklist akan pindah ke bagian done. 
+semua bagian bisa di edit maupun didelete Tasknya
